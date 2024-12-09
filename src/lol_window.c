@@ -474,8 +474,8 @@ lol_window_load_file_finished (GObject *source_object, GAsyncResult *res,
           g_file_get_path (gtk_source_file_get_location (self->source_file)));
   g_object_unref (file);
 
-  // g_signal_handler_unblock(self->source_buffer,
-  //                          self->buffer_changed_handler_id);
+  g_signal_handler_unblock (self->source_buffer,
+                            self->buffer_changed_handler_id);
 
   adw_window_title_set_title (
       self->title_widget,
@@ -494,8 +494,8 @@ void
 lol_window_open_file (LolWindow *self, GFile *file)
 {
 
-  // g_signal_handler_block(self->source_buffer,
-  // self->buffer_changed_handler_id);
+  g_signal_handler_block (self->source_buffer,
+                          self->buffer_changed_handler_id);
 
   if (!G_IS_FILE (file))
     {
@@ -505,8 +505,8 @@ lol_window_open_file (LolWindow *self, GFile *file)
       self->file_hash = generate_hash ("");
       self->is_file_saved = TRUE;
 
-      // g_signal_handler_unblock(self->source_buffer,
-      //                          self->buffer_changed_handler_id);
+      g_signal_handler_unblock (self->source_buffer,
+                                self->buffer_changed_handler_id);
       return;
     }
 
