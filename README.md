@@ -16,7 +16,9 @@ On my system it installs to `/usr/local/`\
 search for Test App or run:
 `./builddir/src/test_app`
 
-This project does provide any libraries it depends on.
+
+## Additional Info
+This project does not provide any libraries it depends on.
 If you add libraries, that get compiled and installed with the project,
 make sure to add `/usr/local/lib/` to `/etc/ld.so.conf.d/`
 or change the prefix to `/usr`
