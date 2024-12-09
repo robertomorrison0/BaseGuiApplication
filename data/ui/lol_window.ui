@@ -1,52 +1,52 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <interface>
-  <requires lib="gtk" version="4.0" />
-  <requires lib="Adw" version="1.0" />
+  <requires lib="gtk" version="4.0"/>
+  <requires lib="Adw" version="1.0"/>
   <template class="LolWindow" parent="AdwApplicationWindow">
     <property name="default-width">800</property>
     <property name="default-height">600</property>
-      <property name="content">
-        <object class="AdwToolbarView">
-          <child type="top">
-            <object class="AdwHeaderBar">
+    <property name="content">
+      <object class="AdwToolbarView">
+        <child type="top">
+          <object class="AdwHeaderBar">
             <property name="title-widget">
-              <object class="AdwWindowTitle" id="title_widget" />
+              <object class="AdwWindowTitle" id="title_widget"/>
             </property>
             <child type="start">
-                <object class="GtkMenuButton">
+              <object class="GtkMenuButton">
                 <property name="label">File</property>
                 <property name="menu-model">file_menu</property>
-                </object>
+              </object>
             </child>
             <child type="end">
-                <object class="GtkMenuButton">
+              <object class="GtkMenuButton">
                 <property name="icon-name">open-menu-symbolic</property>
                 <property name="menu-model">primary_menu</property>
-                </object>
+              </object>
             </child>
-            </object>
-          </child>
-          <property name="content">
+          </object>
+        </child>
+        <property name="content">
           <object class="GtkScrolledWindow">
-          <property name="hexpand">TRUE</property>
+            <property name="hexpand">TRUE</property>
             <property name="vexpand">TRUE</property>
-              <child>
-                <object class="GtkSourceView" id="source_view">
-                  <property name="hexpand">TRUE</property>
-                  <property name="vexpand">TRUE</property>
-                  <property name="show-line-numbers">TRUE</property>
-                  <property name="highlight-current-line">TRUE</property>
-                  <property name="buffer">
+            <child>
+              <object class="GtkSourceView" id="source_view">
+                <property name="hexpand">TRUE</property>
+                <property name="vexpand">TRUE</property>
+                <property name="show-line-numbers">TRUE</property>
+                <property name="highlight-current-line">TRUE</property>
+                <property name="buffer">
                   <object class="GtkSourceBuffer" id="source_buffer">
 
                     </object>
-                  </property>
-                </object>
-              </child>
-            </object>
-          </property>
-        </object>
-      </property>
+                </property>
+              </object>
+            </child>
+          </object>
+        </property>
+      </object>
+    </property>
   </template>
   <menu id="primary_menu">
     <section>
@@ -55,10 +55,7 @@
         <attribute name="action">app.preferences</attribute>
       </item>
       <item>
-        <attribute
-                    name="label"
-                    translatable="yes"
-                >_Keyboard Shortcuts</attribute>
+        <attribute name="label" translatable="yes">_Keyboard Shortcuts</attribute>
         <attribute name="action">win.show-help-overlay</attribute>
       </item>
       <item>
@@ -70,13 +67,29 @@
   <menu id="file_menu">
     <section>
       <item>
-        <attribute name="label" translatable="yes">_Open</attribute>
+        <attribute name="label" translatable="yes">Open</attribute>
         <attribute name="action">doc.open</attribute>
       </item>
       <item>
-          <attribute name="label" translatable="yes">_Save</attribute>
-          <attribute name="action">doc.save</attribute>
-        </item>
+        <attribute name="label" translatable="yes">Save</attribute>
+        <attribute name="action">doc.save</attribute>
+      </item>
+      <item>
+        <attribute name="label" translatable="yes">Save As</attribute>
+        <attribute name="action">doc.saveas</attribute>
+      </item>
     </section>
   </menu>
+  <object class="AdwAlertDialog" id="changes_dialog">
+    <property name="heading" translatable="yes">Save Changes?</property>
+    <property name="body" translatable="yes">The open document contains unsaved changes. Changes which are not saved will be permanently lost.</property>
+    <property name="default-response">save</property>
+    <property name="close-response">cancel</property>
+    <signal name="response" handler="lol_window_unsaved_response_cb"/>
+    <responses>
+      <response id="cancel" translatable="yes">_Cancel</response>
+      <response id="discard" translatable="yes" appearance="destructive">_Discard</response>
+      <response id="save" translatable="yes" appearance="suggested">_Save</response>
+    </responses>
+  </object>
 </interface>

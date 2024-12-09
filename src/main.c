@@ -27,20 +27,19 @@
 #include <gtksourceview/gtksource.h>
 
 int
-main (int   argc,
-      char *argv[])
+main (int argc, char *argv[])
 {
-	g_autoptr(LolApplication) app = NULL;
-	int ret;
+  g_autoptr (LolApplication) app = NULL;
+  int ret;
 
-	gtk_source_init();
+  gtk_source_init ();
 
-	bindtextdomain (GETTEXT_PACKAGE, LOCALEDIR);
-	bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
-	textdomain (GETTEXT_PACKAGE);
+  bindtextdomain (GETTEXT_PACKAGE, LOCALEDIR);
+  bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
+  textdomain (GETTEXT_PACKAGE);
 
-	app = lol_application_new (APP_ID, G_APPLICATION_DEFAULT_FLAGS);
-	ret = g_application_run (G_APPLICATION (app), argc, argv);
+  app = lol_application_new (APP_ID, G_APPLICATION_DEFAULT_FLAGS);
+  ret = g_application_run (G_APPLICATION (app), argc, argv);
 
-	return ret;
+  return ret;
 }
