@@ -1,8 +1,0 @@
-{
-  "/home/simon/Code/GtkBaseApplication/builddir/data/org.robertomorrison.test_app.desktop": "/usr/local/share/applications/org.robertomorrison.test_app.desktop",
-  "/home/simon/Code/GtkBaseApplication/builddir/data/org.robertomorrison.test_app.appdata.xml": "/usr/local/share/appdata/org.robertomorrison.test_app.appdata.xml",
-  "/home/simon/Code/GtkBaseApplication/builddir/src/test_app": "/usr/local/bin/test_app",
-  "/home/simon/Code/GtkBaseApplication/builddir/data/org.robertomorrison.test_app.gschema.xml": "/usr/local/share/glib-2.0/schemas/org.robertomorrison.test_app.gschema.xml",
-  "/home/simon/Code/GtkBaseApplication/data/icons/org.robertomorrison.test_app.svg": "/usr/local/share/icons/hicolor/scalable/apps/org.robertomorrison.test_app.svg",
-  "/home/simon/Code/GtkBaseApplication/data/icons/org.robertomorrison.test_app-symbolic.svg": "/usr/local/share/icons/hicolor/symbolic/apps/org.robertomorrison.test_app-symbolic.svg"
-}

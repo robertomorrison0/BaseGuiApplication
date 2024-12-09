@@ -1,9 +1,0 @@
-[Desktop Entry]
-Name=Test App
-Exec=test_app %U
-Icon=org.robertomorrison.test_app
-Terminal=false
-Type=Application
-Categories=Utility;TextEditor;
-StartupNotify=true
-MimeType=text/plain;application/x-zerosize;
