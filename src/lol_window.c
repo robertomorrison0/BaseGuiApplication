@@ -559,9 +559,6 @@ lol_content_changed (LolWindow *self)
   const char *hash
       = generate_hash_from_buffer (GTK_TEXT_BUFFER (self->source_buffer));
 
-  printf ("Hash: %s\n", hash);
-  printf ("Old hash: %s\n\n", self->file_hash);
-
   return strcmp (hash, self->file_hash) != 0;
 }
 
