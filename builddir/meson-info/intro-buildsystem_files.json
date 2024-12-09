@@ -1,0 +1,10 @@
+[
+  "/home/simon/Code/GtkBaseApplication/meson.build",
+  "/home/simon/Code/GtkBaseApplication/data/meson.build",
+  "/home/simon/Code/GtkBaseApplication/data/org.robertomorrison.test_app.gresource.xml.in",
+  "/home/simon/Code/GtkBaseApplication/data/org.robertomorrison.test_app.desktop.in",
+  "/home/simon/Code/GtkBaseApplication/data/org.robertomorrison.test_app.appdata.xml.in",
+  "/home/simon/Code/GtkBaseApplication/data/org.robertomorrison.test_app.gschema.xml.in",
+  "/home/simon/Code/GtkBaseApplication/data/icons/meson.build",
+  "/home/simon/Code/GtkBaseApplication/src/meson.build"
+]

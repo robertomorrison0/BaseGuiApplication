@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<interface>
+  <requires lib="gtk" version="4.0" />
+  <requires lib="Adw" version="1.0" />
+  <template class="LolWindow" parent="AdwApplicationWindow">
+    <property name="default-width">800</property>
+    <property name="default-height">600</property>
+      <property name="content">
+        <object class="AdwToolbarView">
+          <child type="top">
+            <object class="AdwHeaderBar">
+            <property name="title-widget">
+              <object class="AdwWindowTitle" id="title_widget" />
+            </property>
+            <child type="start">
+                <object class="GtkMenuButton">
+                <property name="label">File</property>
+                <property name="menu-model">file_menu</property>
+                </object>
+            </child>
+            <child type="end">
+                <object class="GtkMenuButton">
+                <property name="icon-name">open-menu-symbolic</property>
+                <property name="menu-model">primary_menu</property>
+                </object>
+            </child>
+            </object>
+          </child>
+          <property name="content">
+          <object class="GtkScrolledWindow">
+          <property name="hexpand">TRUE</property>
+            <property name="vexpand">TRUE</property>
+              <child>
+                <object class="GtkSourceView" id="source_view">
+                  <property name="hexpand">TRUE</property>
+                  <property name="vexpand">TRUE</property>
+                  <property name="show-line-numbers">TRUE</property>
+                  <property name="highlight-current-line">TRUE</property>
+                  <property name="buffer">
+                  <object class="GtkSourceBuffer" id="source_buffer">
+
+                    </object>
+                  </property>
+                </object>
+              </child>
+            </object>
+          </property>
+        </object>
+      </property>
+  </template>
+  <menu id="primary_menu">
+    <section>
+      <item>
+        <attribute name="label" translatable="yes">_Preferences</attribute>
+        <attribute name="action">app.preferences</attribute>
+      </item>
+      <item>
+        <attribute
+                    name="label"
+                    translatable="yes"
+                >_Keyboard Shortcuts</attribute>
+        <attribute name="action">win.show-help-overlay</attribute>
+      </item>
+      <item>
+        <attribute name="label" translatable="yes">_About Test App </attribute>
+        <attribute name="action">app.about</attribute>
+      </item>
+    </section>
+  </menu>
+  <menu id="file_menu">
+    <section>
+      <item>
+        <attribute name="label" translatable="yes">_Open</attribute>
+        <attribute name="action">doc.open</attribute>
+      </item>
+      <item>
+          <attribute name="label" translatable="yes">_Save</attribute>
+          <attribute name="action">doc.save</attribute>
+        </item>
+    </section>
+  </menu>
+</interface>

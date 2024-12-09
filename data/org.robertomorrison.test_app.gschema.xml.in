@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<schemalist gettext-domain="@APP_NAME@">
+	<schema id="@APP_ID@" path="@DEFAULT_RESOURCE_PATH@/">
+    	<key name="window-width" type="i">
+        <default>800</default>
+        </key>
+        <key name="window-height" type="i">
+        <default>600</default>
+        </key>
+        <key name="window-is-maximized" type="b">
+        <default>false</default>
+        </key>
+        <key name="window-is-fullscreen" type="b">
+        <default>false</default>
+        </key>
+	</schema>
+</schemalist>

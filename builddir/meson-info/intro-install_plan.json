@@ -1,0 +1,39 @@
+{
+  "targets": {
+    "/home/simon/Code/GtkBaseApplication/builddir/data/org.robertomorrison.test_app.desktop": {
+      "destination": "{datadir}/applications/org.robertomorrison.test_app.desktop",
+      "tag": null,
+      "subproject": null,
+      "install_rpath": null
+    },
+    "/home/simon/Code/GtkBaseApplication/builddir/data/org.robertomorrison.test_app.appdata.xml": {
+      "destination": "{datadir}/appdata/org.robertomorrison.test_app.appdata.xml",
+      "tag": null,
+      "subproject": null,
+      "install_rpath": null
+    },
+    "/home/simon/Code/GtkBaseApplication/builddir/src/test_app": {
+      "destination": "{bindir}/test_app",
+      "tag": "runtime",
+      "subproject": null,
+      "install_rpath": null
+    }
+  },
+  "data": {
+    "/home/simon/Code/GtkBaseApplication/builddir/data/org.robertomorrison.test_app.gschema.xml": {
+      "destination": "{datadir}/glib-2.0/schemas/org.robertomorrison.test_app.gschema.xml",
+      "tag": null,
+      "subproject": null
+    },
+    "/home/simon/Code/GtkBaseApplication/data/icons/org.robertomorrison.test_app.svg": {
+      "destination": "{datadir}/icons/hicolor/scalable/apps/org.robertomorrison.test_app.svg",
+      "tag": null,
+      "subproject": null
+    },
+    "/home/simon/Code/GtkBaseApplication/data/icons/org.robertomorrison.test_app-symbolic.svg": {
+      "destination": "{datadir}/icons/hicolor/symbolic/apps/org.robertomorrison.test_app-symbolic.svg",
+      "tag": null,
+      "subproject": null
+    }
+  }
+}

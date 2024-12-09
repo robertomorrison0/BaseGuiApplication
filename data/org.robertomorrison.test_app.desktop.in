@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=@APP_DISPLAY_NAME@
+Exec=@APP_NAME@ %U
+Icon=@APP_ID@
+Terminal=false
+Type=Application
+Categories=@APP_CATEGORIES@
+StartupNotify=true
+MimeType=@APP_MIME_TYPE@

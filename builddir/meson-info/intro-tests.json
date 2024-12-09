@@ -1,0 +1,61 @@
+[
+  {
+    "cmd": [
+      "/usr/bin/desktop-file-validate",
+      "/home/simon/Code/GtkBaseApplication/builddir/data/org.robertomorrison.test_app.desktop"
+    ],
+    "env": {},
+    "name": "Validate desktop file",
+    "workdir": null,
+    "timeout": 30,
+    "suite": [
+      "test_app"
+    ],
+    "is_parallel": true,
+    "priority": 0,
+    "protocol": "exitcode",
+    "depends": [],
+    "extra_paths": []
+  },
+  {
+    "cmd": [
+      "/usr/bin/appstream-util",
+      "validate",
+      "data/org.robertomorrison.test_app.appdata.xml"
+    ],
+    "env": {},
+    "name": "Validate appstream file",
+    "workdir": null,
+    "timeout": 30,
+    "suite": [
+      "test_app"
+    ],
+    "is_parallel": true,
+    "priority": 0,
+    "protocol": "exitcode",
+    "depends": [
+      "3a6eb07@@org.robertomorrison.test_app.appdata.xml@cus"
+    ],
+    "extra_paths": []
+  },
+  {
+    "cmd": [
+      "/usr/bin/glib-compile-schemas",
+      "--strict",
+      "--dry-run",
+      "/home/simon/Code/GtkBaseApplication/data"
+    ],
+    "env": {},
+    "name": "Validate schema file",
+    "workdir": null,
+    "timeout": 30,
+    "suite": [
+      "test_app"
+    ],
+    "is_parallel": true,
+    "priority": 0,
+    "protocol": "exitcode",
+    "depends": [],
+    "extra_paths": []
+  }
+]

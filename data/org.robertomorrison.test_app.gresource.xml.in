@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gresources>
+  <gresource prefix="@DEFAULT_RESOURCE_PATH@">
+    <file preprocess="xml-stripblanks" alias="lol_window.ui">ui/lol_window.ui</file>
+    <file preprocess="xml-stripblanks" alias="gtk/help-overlay.ui">ui/gtk/help-overlay.ui</file>
+  </gresource>
+  <gresource prefix="@DEFAULT_RESOURCE_PATH@/icons/scalable/actions">
+  <file preprocess="xml-stripblanks" alias="@APP_ID@.svg">../data/icons/hicolor/scalable/actions/@APP_ID@.svg</file>
+  <file preprocess="xml-stripblanks" alias="@APP_ID@-symbolic.svg">../data/icons/hicolor/scalable/actions/@APP_ID@-symbolic.svg</file>
+  </gresource>
+</gresources>
