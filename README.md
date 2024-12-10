@@ -2,7 +2,7 @@
 
 This is an application that can serve as a base for projects,
 that use gtk4 and libadwaita.
-In practice, this is a simple, not very usefull, text editor,
+In practice, this is a simple, not very useful, text editor,
 that can handle only one document at once.
 
 ## How to build?
